@@ -72,12 +72,12 @@
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="rg">RG</label>
-                    <input name="rg" id="rg" class="campo__escrita campo__escrita--menor" type="text" minlength="11" maxlength="14" required />
+                    <input name="rg" id="rg" class="campo__escrita campo__escrita--menor" type="text" required minlength="10"/>
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
-                    <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" type="text" required pattern="\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}" />
+                    <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" type="text" minlength="11" maxlength="11" required pattern="^[0-9]{11}$" />
                     <span class="mensagem-erro"></span>                                                          
                 </fieldset>
                 <fieldset class="formulario__campo">

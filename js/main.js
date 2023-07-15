@@ -25,7 +25,7 @@ formulario.addEventListener("submit", (e) => {
     localStorage.setItem("cadastro", JSON.stringify(listaRespostas));
 
     // Mudando de página
-    window.location.href = "./abrir-conta-form-2.html";
+    window.location.href = "../pages/abrir-conta-form-2.html";
 })
 
 // Adicionando listener para a validação
@@ -48,12 +48,12 @@ const mensagens = {
     nome: {
         valueMissing: "O campo de nome não pode estar vazio.",
         patternMismatch: "Por favor, preencha um nome válido.",
-        tooShort: "Por favor, preencha um nome válido."
+        tooShort: "O campo do nome não tem caractéres suficientes."
     },
     email: {
         valueMissing: "O campo de e-mail não pode estar vazio.",
         typeMismatch: "Por favor, preencha um email válido.",
-        tooShort: "Por favor, preencha um email válido."
+        tooShort: "O campo do email não tem caractéres suficientes."
     },
     rg: {
         valueMissing: "O campo de RG não pode estar vazio.",
@@ -91,7 +91,10 @@ function verificaCampo(campo) {
     tiposDeErro.forEach(erro => {
         if (campo.validity[erro]) {
             mensagem = mensagens[campo.name][erro];
+            console.log(erro);
             console.log(mensagem);
+            console.log(campo.validity[erro]);
+
         }
     })
 
